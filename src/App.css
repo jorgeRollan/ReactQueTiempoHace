@@ -1,0 +1,146 @@
+/* Estilo para el contenedor principal */
+#root {
+  width: 100%; /* Ocupa todo el ancho de la pantalla */
+  height: 100vh; /* Ocupa toda la altura de la ventana */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  text-align: center;
+  background-color: #f0f4f8;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#showWeather, #selectCity {
+  width: 100%;
+  max-width: 600px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+}
+
+#showWeather {
+  background-color: #e0f7fa;
+  transition: background-color 0.3s ease;
+}
+
+#showWeather:hover {
+  background-color: #b2ebf2;
+}
+
+#selectCity {
+  background-color: #fff9c4;
+}
+
+/* Barra de búsqueda estilizada */
+#searchBar {
+  width: 100%;
+  max-width: 700px;
+  padding: 1rem 1.5rem;
+  font-size: 1.5rem;
+  border-radius: 25px;
+  border: 2px solid #4a90e2;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  outline: none;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+#searchBar:focus {
+  border-color: #357ab8;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo de botones acorde a la barra de búsqueda */
+button {
+  border-radius: 25px;
+  padding: 1rem 2rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  background-color: #4a90e2;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  margin: 1rem 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background-color: #357ab8;
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Modo oscuro */
+@media (prefers-color-scheme: dark) {
+  #root {
+    background-color: #2e3a47;
+    color: #f0f0f0;
+  }
+
+  #showWeather {
+    background-color: #37474f;
+    color: #f0f0f0;
+  }
+
+  #selectCity {
+    background-color: #455a64;
+    color: #f0f0f0;
+  }
+
+  #searchBar {
+    background-color: #455a64;
+    color: #f0f0f0;
+    border-color: #607d8b;
+  }
+
+  #searchBar:focus {
+    border-color: #4a90e2;
+  }
+
+  button {
+    background-color: #37474f;
+    color: #f0f0f0;
+  }
+
+  button:hover {
+    background-color: #4a90e2;
+  }
+}
+
+/* Estilo para los logos */
+.logo {
+  height: 5em;
+  padding: 1.5em;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #4a90e2);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafb);
+}
+
+/* Estilo para tarjetas de contenido */
+.card {
+  width: 100%;
+  max-width: 600px;
+  padding: 2em;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Texto gris claro para documentación */
+.read-the-docs {
+  color: #888;
+}
