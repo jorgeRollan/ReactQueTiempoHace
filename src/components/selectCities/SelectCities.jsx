@@ -51,16 +51,16 @@ export default function SelectCities() {
   return (
     <>
       <div id="selectCity">
+      <>
+          <SearchCityContext.Provider value={{ selectCity, setSelectCity, setLoading }}>
+            <FormSearchCity />
+          </SearchCityContext.Provider>
+        </>
+        
         <>
           <SelectCityContext.Provider value={{ selectCity, setSelectCity, selectCities, setLoading }}>
             <Select />
           </SelectCityContext.Provider>
-        </>
-
-        <>
-          <SearchCityContext.Provider value={{ selectCity, setSelectCity, setLoading }}>
-            <FormSearchCity />
-          </SearchCityContext.Provider>
         </>
 
         {showWeather ? 

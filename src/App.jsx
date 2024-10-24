@@ -3,6 +3,7 @@ import SelectCities from './components//selectCities/SelectCities';
 import CityLocation from './components/CityLocation';
 import { CleanContext, MapContext, Fetch30Context } from './context/Contexts';
 import Mapa from './components/Mapa';
+import Navigator from './components/navigator/Navigator';
 
 import './App.css';
 import Weather30Days from './components/Weather30Days';
@@ -25,6 +26,7 @@ function App() {
   return (
     <div>
       <h1>UNIT 1. API Weather</h1>
+      <Navigator/>
       {clean ?
         <button onClick={() => { setClean(false); setShowWeather(false) }}>Clima por ubicación</button>
         : <MapContext.Provider value={{ position, setPosition, weatherData, setWeatherData }}>
